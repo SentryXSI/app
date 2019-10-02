@@ -1,0 +1,2 @@
+# app
+Base application skeleton
