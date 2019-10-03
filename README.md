@@ -1,2 +1,2 @@
 # app
-Base application skeleton
+Base application skeleton for NinjaSentry REI framework.
