@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+# ------------------------------------------------------------------------------
+#
+# NinjaSentry AX
+#
+# ------------------------------------------------------------------------------
+# App Skeleton CLI
+# ------------------------------------------------------------------------------
+
+# Generators
+
+# ax component create about
+# ax controller create IndexController ( component name or /path/to/file)
+# ax model create model_name about ( component name or /path/to/file )
+# ax view create terms.tpl.php about ( component name or /path/to/file )
+
+if [[ -z "$1" ]]; then
+    echo "AX"
+    echo ""
+    echo "$USER"
+    echo "$PATH"
+    echo ""
+    exit
+fi
+
+if [[ "$1" == 'component' ]]; then
+
+    if [[ -n "$2" && "$2" == 'create' ]]; then
+
+        if [[ -n "$3" ]]; then
+
+            cwd="$(dirname $(pwd))/components/$3"
+
+            echo "Create component $3 in $cwd"
+
+        fi
+    fi
+fi
+
+# Operations
+
+# delete /tmp/cache/
+# delete /tmp/session/
