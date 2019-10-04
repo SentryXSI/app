@@ -4,23 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "409e59452a207a63cf45c729475d5d85",
+    "content-hash": "7ed3977e0b5b51f45278a4a0ba3e1a90",
     "packages": [
         {
             "name": "sentryxsi/rei",
-            "version": "0.0.2",
+            "version": "0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sentryxsi/rei",
-                "reference": "517490f64740256f46b857b1aa8feb20cc7d55f7"
+                "reference": "18907da9fceab4180fd88ccae4b9e1d95341a4e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sentryxsi/rei/zipball/517490f64740256f46b857b1aa8feb20cc7d55f7",
-                "reference": "517490f64740256f46b857b1aa8feb20cc7d55f7",
+                "url": "https://api.github.com/repos/sentryxsi/rei/zipball/18907da9fceab4180fd88ccae4b9e1d95341a4e0",
+                "reference": "18907da9fceab4180fd88ccae4b9e1d95341a4e0",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
                 "php": "^7.2"
             },
             "type": "project",
@@ -39,7 +41,7 @@
             ],
             "description": "NinjaSentry REI framework prototype",
             "homepage": "https://github.com/SentryXSI/rei",
-            "time": "2019-10-02T16:43:47+00:00"
+            "time": "2019-10-04T15:39:26+00:00"
         }
     ],
     "packages-dev": [],
