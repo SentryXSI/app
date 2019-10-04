@@ -17,7 +17,7 @@ class Bootstrap
      * Bootstrap constructor.
      */
     public function __construct() {
-        echo 'Bootstrapping';
+        echo $_SERVER['REMOTE_ADDR'] ?? 'something';
     }
 
     /**

@@ -6,4 +6,3 @@ require __DIR__ . '../vendor/autoload.php';
 
 // load bootstrap
 ( new App\Kernel\Bootstrap() );
-
