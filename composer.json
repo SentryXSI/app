@@ -23,7 +23,8 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "source",
-        "sort-packages": true
+        "sort-packages": true,
+        "bin-dir": "bin"
     },
     "autoload": {
         "psr-4": {
