@@ -11,4 +11,4 @@ Create local repo with git
    
 Run composer to install framework   
 
-    composer install
+    composer install --no-dev
