@@ -17,7 +17,6 @@
         }
     ],
     "require": {
-        "sentryxsi/app": "~0.0.1",
         "sentryxsi/rei": "~0.0.2",
         "php": "^7.2"
     },
