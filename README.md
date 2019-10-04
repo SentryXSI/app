@@ -1,2 +1,10 @@
 # app
-Base application skeleton for NinjaSentry REI framework.
+Base application skeleton test for NinjaSentry REI framework.
+
+### Clone 
+
+    git clone git@github.com:SentryXSI/app "app-test"
+    
+## Install 
+
+    composer install
