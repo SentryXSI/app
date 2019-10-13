@@ -2,21 +2,27 @@
 
 # ------------------------------------------------------------------------------
 #
-# NinjaSentry AX
+# NinjaSentry A|X [ AdminX ]
 #
 # ------------------------------------------------------------------------------
-# App Skeleton CLI
+#
+# BattleStation CMS \\ App Skeleton CLI
+#
+# ------------------------------------------------------------------------------
+# Generators
 # ------------------------------------------------------------------------------
 
-# Generators
-
-# ax component create about
-# ax controller create IndexController ( component name or /path/to/file)
-# ax model create model_name about ( component name or /path/to/file )
-# ax view create terms.tpl.php about ( component name or /path/to/file )
+# ax component make $component_name
+# ax controller make $controller_name about ( component name, /path/to/file, or cwd )
+# ax model make $model_name about ( component name, /path/to/file, or cwd )
+# ax view make $view_name about ( component name, /path/to/file, or cwd )
+# ax layout make $layout_name
+# ax module make $module_name
+# ax partial make $partial_name
+# ax theme make $theme_name
 
 if [[ -z "$1" ]]; then
-    echo "AX"
+    echo "A|X"
     echo ""
     echo "$USER"
     echo "$PATH"
@@ -24,21 +30,86 @@ if [[ -z "$1" ]]; then
     exit
 fi
 
+# ------------------------------------------------------------------------------
+# Make Component
+# ------------------------------------------------------------------------------
+# ax component make about
+
 if [[ "$1" == 'component' ]]; then
 
-    if [[ -n "$2" && "$2" == 'create' ]]; then
+    if [[ -n "$2" && "$2" == 'make' ]]; then
 
-        if [[ -n "$3" ]]; then
+        if [[ -z "$3" ]]; then
 
-            cwd="$(dirname $(pwd))/components/$3"
+            echo 'Component name not found'
+            echo 'ax component make "name"'
+            exit
 
-            echo "Create component $3 in $cwd"
+        else
 
+            mycwd="$(dirname $(pwd))/components/$3"
+
+            if [[ -d "$mycwd" ]]; then
+                echo "Component already exists ( $mycwd )"
+                exit
+            fi
+
+            echo "Make component $3 in $mycwd"
+            exit
         fi
     fi
 fi
 
-# Operations
+# ------------------------------------------------------------------------------
+# Make Controller
+# ------------------------------------------------------------------------------
+# ax controller make test about
 
-# delete /tmp/cache/
-# delete /tmp/session/
+if [[ "$1" == 'controller' ]]; then
+
+    if [[ -n "$2" && "$2" == 'make' ]]; then
+
+        if [[ -z "$3" ]]; then
+            echo "Controller name not found"
+            exit
+        else
+            controller="$3"
+        fi
+
+        if [[ -z "$4" ]]; then
+            echo "Component name not found"
+            exit
+        else
+            component="$4"
+        fi
+
+        basepath="components/$component/controllers"
+        filename="${controller^}Controller.php"
+
+        mycwd="$(dirname $(pwd))/$basepath/$filename"
+
+        echo "Make controller in $mycwd"
+
+        exit
+    fi
+fi
+
+# Make Model
+
+# Make View
+
+# Make Module
+
+# Make Partial
+
+# Make Layout
+
+# Make Theme
+
+# ------------------------------------------------------------------------------
+# File Operations
+# ------------------------------------------------------------------------------
+
+# delete /tmp/cache/*
+# delete /tmp/session/*
+# delete /tmp/config-cache.php
