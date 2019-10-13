@@ -14,12 +14,15 @@ use NinjaSentry\Rei\{
  *
  * -----------------------------------------------------------------------------
  *
- * @package App\Components\Homes
+ * @package App\Components\Home
  */
 final class IndexController extends BaseController
 {
-    /**
+    /**-------------------------------------------------------------------------
+     *
      * IndexController constructor.
+     *
+     * -------------------------------------------------------------------------
      *
      * @param \NinjaSentry\Rei\Http\Response $response
      */
